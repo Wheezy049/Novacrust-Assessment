@@ -51,7 +51,7 @@ View the app: Open http://localhost:3000 in your browser.
 
 3. Client-Side Rendering: The widget is marked with "use client" because it relies heavily on user interaction and state. This bypasses Server-Side Rendering (SSR) for the widget specifically to allow for immediate interactivity.
 
-## ✨ Features
+### Features
 1. Tab-Based Navigation: Seamlessly switch between "Crypto to cash" and "Cash to crypto" views.
 
 2. Variant Dropdowns: A single reusable Dropdown component handles both small currency selectors and large wallet selectors via a variant prop.
