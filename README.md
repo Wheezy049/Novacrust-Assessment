@@ -15,12 +15,12 @@ git clone <your-repo-url>
 cd crypto-conversion-widget
 ```
 
-# Install dependencies:
+2.  **Install dependencies:**
 ```Bash
 npm install
 ```
 
-# Run the development server:
+3.  **Run the development server:**
 ```Bash
 npm run dev
 ```
@@ -36,14 +36,15 @@ View the app: Open http://localhost:3000 in your browser.
 4. Component Composition: The UI is broken down into reusable atoms (Button, Dropdown) and patterns (TabSwitcher, ConversionForm) to ensure maintainability.
 
 ## 📝 Assumptions & Trade-offs
-# Assumptions
+
+### Assumptions
 1. Static Mock Data: Since no backend was required, all currency rates (e.g., 1 ETH = X NGN) and wallet options are hardcoded as mock data within the state.
 
 2. Icon Assets: It is assumed that currency icons (eth.png, NGN.png) and wallet logos are stored in the /public directory.
 
 3. Local State only: Form data is managed via React useState. In a production environment, this might be handled by a form library like React Hook Form or a global store like Zustand.
 
-# Trade-offs
+### Trade-offs
 1. Custom Dropdown vs. Native Select: I built a custom Dropdown component instead of using the native HTML <select>.
 
 2. Animations: Basic Tailwind animate-in classes were used for tab switching. For more complex, physics-based transitions, Framer Motion would be a better choice but was omitted to keep the bundle size small and dependencies minimal.
