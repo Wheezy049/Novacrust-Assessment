@@ -16,7 +16,7 @@ function CryptoToCash() {
     return (
         <div>
             <div className="space-y-3">
-                <div className="p-4 rounded-3xl border border-gray-100 bg-white group focus-within:ring-1 focus-within:ring-[#003131]">
+                <div className="p-4 rounded-3xl border border-[#013941] bg-white group focus-within:ring-1 focus-within:ring-[#003131]">
                     <label className="text-xs text-gray-400 block mb-1">You pay</label>
                     <div className="flex justify-between items-center">
                         <input
@@ -36,7 +36,7 @@ function CryptoToCash() {
                     </div>
                 </div>
 
-                <div className="p-4 rounded-3xl border border-gray-100 bg-white">
+                <div className="p-4 rounded-3xl border border-[#013941] bg-white">
                     <label className="text-xs text-gray-400 block mb-1">You receive</label>
                     <div className="flex justify-between items-center">
                         <input type="text" value="1.00" readOnly className="text-xl font-bold outline-none w-full" />

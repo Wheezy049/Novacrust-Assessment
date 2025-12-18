@@ -37,8 +37,8 @@ function Dropdown({ options, onSelect, placeholder, showSearch, variant = 'full'
     };
 
     const buttonClasses = variant === 'compact'
-        ? "flex items-center gap-2 rounded-full border border-gray-200 bg-[#F9FAFB] px-3 py-1.5 hover:bg-gray-100 border border-gray-50 transition-all shrink-0"
-        : "flex w-full items-center justify-between rounded-[20px] border border-[#E0E0E0] bg-white p-3 transition-all hover:bg-gray-50";
+        ? "flex items-center gap-4 rounded-full border border-gray-200 bg-[#F9FAFB] px-3 py-1.5 hover:bg-gray-100 border border-[#013941] transition-all shrink-0"
+        : "flex w-full items-center justify-between rounded-[20px] border border-[#013941] bg-white p-3 transition-all hover:bg-gray-50";
 
     const labelClasses = variant === 'compact'
         ? "text-xs font-bold text-[#013941]"
@@ -47,7 +47,7 @@ function Dropdown({ options, onSelect, placeholder, showSearch, variant = 'full'
     return (
         <div className={variant === 'full' ? "relative w-full" : "relative"}>
             <button onClick={handleToggle} className={buttonClasses}>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1">
                     {selected?.icon && (
                         <Image src={selected.icon} alt={selected.label} width={10} height={10} className={` ${variant === 'compact' ? 'w-4 h-4' : 'w-6 h-6'} rounded-full`} />
                     )}
@@ -59,9 +59,9 @@ function Dropdown({ options, onSelect, placeholder, showSearch, variant = 'full'
             </button>
 
             {isOpen && (
-                <div className={`absolute z-50 mt-2 ${variant === 'compact' ? 'right-0 w-48' : 'w-full mx-2 mx:ml-5'} overflow-hidden rounded-2xl border border-gray-100 bg-white animate-in fade-in zoom-in duration-200`}>
+                <div className={`absolute z-50 mt-2 ${variant === 'compact' ? 'right-0 w-48' : 'w-full mx-2 mx:ml-5'} overflow-hidden rounded-2xl border border-[#013941] bg-white animate-in fade-in zoom-in duration-200`}>
                     {showSearch && (
-                        <div className="flex items-center border border-gray-50 m-2 rounded-full px-4 py-3">
+                        <div className="flex items-center border border-[#013941] m-2 rounded-full px-4 py-3">
                             <Search className="h-4 w-4 text-[#013941]" />
                             <input className="ml-2 w-full text-sm outline-none" placeholder="Search" />
                         </div>

@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from './Button';
+import { clashDisplay } from '@/lib/fonts';
 
 function CashToCrypto() {
     return (
         <div>
             <div className="flex flex-col items-center text-center py-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <h2 className="text-[32px] font-medium text-[#013941] mb-4">Coming Soon!</h2>
+                <h2 className={` ${clashDisplay.className} text-[32px] font-medium text-[#013941] mb-4`}>Coming Soon!</h2>
                 <p className="text-[#4F4F4F] text-xl leading-[150%] mb-8">
                     Cash to Crypto is almost here. <br />
                     Enter your email and we&#39;ll let you know the moment it&#39;s live.
