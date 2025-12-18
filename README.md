@@ -11,8 +11,8 @@ A high-fidelity, responsive crypto-to-cash conversion widget built with Next.js,
 
 1. **Clone the repository:**
 ```bash
-git clone <your-repo-url>
-cd crypto-conversion-widget
+git clone https://github.com/Wheezy049/Novacrust-Assessment
+cd novacrust
 ```
 
 2.  **Install dependencies:**
