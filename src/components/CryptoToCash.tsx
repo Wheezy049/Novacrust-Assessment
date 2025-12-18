@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
-import { ChevronDown } from 'lucide-react';
 import Button from './Button';
 
 
@@ -11,15 +10,15 @@ function CryptoToCash() {
 
     return (
         <div>
-            <div className="space-y-4">
-                <div className="p-5 rounded-3xl border border-gray-100 bg-white group focus-within:ring-1 focus-within:ring-[#003131]">
+            <div className="space-y-3">
+                <div className="p-4 rounded-3xl border border-gray-100 bg-white group focus-within:ring-1 focus-within:ring-[#003131]">
                     <label className="text-xs text-gray-400 block mb-1">You pay</label>
                     <div className="flex justify-between items-center">
                         <input
                             type="number"
                             value={amount}
                             onChange={(e) => setAmount(e.target.value)}
-                            className="text-2xl font-bold outline-none w-full"
+                            className="text-xl font-bold outline-none w-full"
                         />
                         <Dropdown
                         variant='compact'
@@ -30,10 +29,10 @@ function CryptoToCash() {
                     </div>
                 </div>
 
-                <div className="p-5 rounded-3xl border border-gray-100 bg-white">
+                <div className="p-4 rounded-3xl border border-gray-100 bg-white">
                     <label className="text-xs text-gray-400 block mb-1">You receive</label>
                     <div className="flex justify-between items-center">
-                        <input type="text" value="1.00" readOnly className="text-2xl font-bold outline-none w-full" />
+                        <input type="text" value="1.00" readOnly className="text-xl font-bold outline-none w-full" />
                         <Dropdown
                         variant='compact'
                             options={[{ id: '1', label: 'ETH', icon: "/eth.png" }, { id: '2', label: 'NGN', icon: "/NGN.png" }]}
@@ -44,9 +43,9 @@ function CryptoToCash() {
                 </div>
 
                 {/* 3. Dropdowns */}
-                <div className="space-y-4 pt-2">
+                <div className="space-y-3 pt-2">
                     <div>
-                        <label className="text-base font-medium text-[#013941] block mb-2">Pay from</label>
+                        <label className="text-sm font-medium text-[#013941] block mb-1">Pay from</label>
                         <Dropdown
                             placeholder="Select an option"
                             options={[{ id: '1', label: 'Metamask', icon: "/metamask.jpg"}, { id: '2', label: 'Rainbow', icon: "/rainbow.png" }]}
@@ -54,7 +53,7 @@ function CryptoToCash() {
                         />
                     </div>
                     <div>
-                        <label className="text-base font-medium text-[#013941] block mb-2">Pay to</label>
+                        <label className="text-sm font-medium text-[#013941] block mb-1">Pay to</label>
                         <Dropdown
                             placeholder="Select an option"
                             options={[{ id: '3', label: 'Bank Account' }]}

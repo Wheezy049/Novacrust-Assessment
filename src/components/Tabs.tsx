@@ -17,12 +17,12 @@ function Tabs({ activeTab, onTabChange }: TabSwitcherProps) {
 
 
     return (
-        <div className="flex flex-col sm:flex-row gap-1 sm:gap-0 bg-[#F3F4F3] rounded-[20px] sm:rounded-[30px] p-1 sm:p-2 mb-8 w-full sm:w-fit mx-auto max-w-[300px] sm:max-w-none">
+        <div className="flex flex-col sm:flex-row gap-1 sm:gap-0 bg-[#F3F4F3] rounded-[20px] sm:rounded-[30px] p-1 sm:p-2 mb-6 w-full sm:w-fit mx-auto max-w-[300px] sm:max-w-none">
             {tabs.map((tab) => (
                 <button
                     key={tab.id}
                     onClick={() => onTabChange(tab.id)}
-                    className={`py-2 px-4 sm:px-6 rounded-full text-sm font-medium transition-all duration-300 w-full sm:w-auto ${activeTab === tab.id
+                    className={`py-2 px-4 sm:px-6 rounded-full text-sm font-medium transition-all duration-300 w-full whitespace-nowrap sm:w-auto ${activeTab === tab.id
                             ? 'bg-[#013941] text-white shadow-sm'
                             : 'text-[#828282] hover:text-[#003131]'
                         }`}

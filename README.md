@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Crypto Conversion Widget
+A high-fidelity, responsive crypto-to-cash conversion widget built with Next.js, TypeScript, and Tailwind CSS. This project demonstrates clean component architecture, state management, and a polished UI/UX matching specific design requirements.
 
-## Getting Started
+## 🚀 Setup Instructions
 
-First, run the development server:
+### Prerequisites
+- Node.js (v18.x or later recommended)
+- npm
 
+### Installation
+
+1. **Clone the repository:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd crypto-conversion-widget
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Install dependencies:
+```Bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Run the development server:
+```Bash
+npm run dev
+```
+View the app: Open http://localhost:3000 in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Technical Choices
+1. Next.js (App Router): Chosen for its robust routing and optimized image handling via the next/image component.
 
-## Learn More
+2. Tailwind CSS: Used for rapid, utility-first styling to achieve the exact border-radius (40px), custom colors (#003131), and responsive layouts.
 
-To learn more about Next.js, take a look at the following resources:
+3. Lucide React: Implemented for lightweight, consistent iconography.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Component Composition: The UI is broken down into reusable atoms (Button, Dropdown) and patterns (TabSwitcher, ConversionForm) to ensure maintainability.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Assumptions & Trade-offs
+# Assumptions
+1. Static Mock Data: Since no backend was required, all currency rates (e.g., 1 ETH = X NGN) and wallet options are hardcoded as mock data within the state.
 
-## Deploy on Vercel
+2. Icon Assets: It is assumed that currency icons (eth.png, NGN.png) and wallet logos are stored in the /public directory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Local State only: Form data is managed via React useState. In a production environment, this might be handled by a form library like React Hook Form or a global store like Zustand.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Trade-offs
+1. Custom Dropdown vs. Native Select: I built a custom Dropdown component instead of using the native HTML <select>.
+
+2. Animations: Basic Tailwind animate-in classes were used for tab switching. For more complex, physics-based transitions, Framer Motion would be a better choice but was omitted to keep the bundle size small and dependencies minimal.
+
+3. Client-Side Rendering: The widget is marked with "use client" because it relies heavily on user interaction and state. This bypasses Server-Side Rendering (SSR) for the widget specifically to allow for immediate interactivity.
+
+## ✨ Features
+1. Tab-Based Navigation: Seamlessly switch between "Crypto to cash" and "Cash to crypto" views.
+
+2. Variant Dropdowns: A single reusable Dropdown component handles both small currency selectors and large wallet selectors via a variant prop.
+
+3. Fully Responsive: The layout scales gracefully from mobile devices to large desktops.

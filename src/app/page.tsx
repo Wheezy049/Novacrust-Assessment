@@ -22,12 +22,12 @@ export default function Home() {
   };
 
   return (
-    <div className='flex justify-center items-center m-auto py-10 flex-col px-4'>
+    <div className='flex justify-center items-center w-full bg-gray-50 py-5 px-4'>
+      <div className="w-full max-w-[500px] bg-white border border-gray-100 p-4 sm:p-8 rounded-[30px] shadow-xl">
       <Tabs
         activeTab={activeTab}
         onTabChange={(id) => setActiveTab(id)}
       />
-      <div className="w-full max-w-[600px]">
         <div className="mt-4">
           {renderTabContent()}
         </div>
