@@ -17,7 +17,7 @@ function Tabs({ activeTab, onTabChange }: TabSwitcherProps) {
 
 
     return (
-        <div className="flex flex-row gap-1 bg-[#F3F4F3] rounded-[30px] p-1 mb-6 w-full sm:w-fit mx-auto overflow-x-auto">
+        <div className="flex flex-row bg-[#F3F4F3] rounded-[30px] p-1 mb-6 w-full sm:w-fit mx-auto overflow-x-auto">
             {tabs.map((tab) => (
                 <button
                     key={tab.id}
